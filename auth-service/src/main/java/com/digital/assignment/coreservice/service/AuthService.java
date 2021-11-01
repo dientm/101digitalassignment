@@ -9,7 +9,7 @@ import com.digital.assignment.coreservice.dto.AuthRequest;
 import com.digital.assignment.coreservice.dto.AuthResponse;
 import com.digital.assignment.coreservice.utils.JwtUtil;
 
-import dto.UserDto;
+import dto.user.UserDto;
 
 @Service
 public class AuthService {

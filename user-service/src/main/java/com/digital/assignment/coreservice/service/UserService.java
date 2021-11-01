@@ -5,10 +5,11 @@ import org.springframework.stereotype.Service;
 
 import com.digital.assignment.coreservice.entity.Role;
 import com.digital.assignment.coreservice.entity.User;
+import com.digital.assignment.coreservice.exception.UserNotFoundException;
 import com.digital.assignment.coreservice.repository.RoleRepository;
 import com.digital.assignment.coreservice.repository.UserRepository;
 
-import dto.UserDto;
+import dto.user.UserDto;
 
 @Service
 public class UserService {
@@ -19,7 +20,7 @@ public class UserService {
     @Autowired
     private RoleRepository roleRepository;
 
-    public User save(UserDto dto) {
+    public User save(UserDto dto) throws Exception {
         User user = new User();
         user.setUsername(dto.getUsername());
         user.setPassword(dto.getPassword());
@@ -34,7 +35,7 @@ public class UserService {
         return userRepository.findById(entity.getId()).orElse(null);
     }
 
-    public User getById(long id) {
-        return this.userRepository.findById(id).orElse(null);
+    public User getById(long id) throws UserNotFoundException {
+        return this.userRepository.findById(id).orElseThrow(() -> new UserNotFoundException(id));
     }
 }

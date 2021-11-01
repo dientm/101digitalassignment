@@ -7,7 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
@@ -22,5 +24,11 @@ public class Role {
 
     private String description;
 
+    public Role(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
+
+    public Role() {}
 }
 
