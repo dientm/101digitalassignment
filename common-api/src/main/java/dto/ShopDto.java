@@ -2,17 +2,26 @@ package dto;
 
 import java.util.List;
 
-import lombok.Data;
-
-@Data
 public class ShopDto {
+
     private long id;
+
     private String name;
+
     private String contact;
+
     private String location;
+
     private List<Long> products;
+
     private int queueSize;
+
     private int maxQueueSize;
+
+    private String openHour = "8:00 AM";
+
+    private String closeHour = "10:00 PM";
+
     private List<QueueDto> queues;
 
     public long getId() {
@@ -84,6 +93,24 @@ public class ShopDto {
 
     public ShopDto setQueues(List<QueueDto> queues) {
         this.queues = queues;
+        return this;
+    }
+
+    public String getOpenHour() {
+        return openHour;
+    }
+
+    public ShopDto setOpenHour(String openHour) {
+        this.openHour = openHour;
+        return this;
+    }
+
+    public String getCloseHour() {
+        return closeHour;
+    }
+
+    public ShopDto setCloseHour(String closeHour) {
+        this.closeHour = closeHour;
         return this;
     }
 }

@@ -36,6 +36,10 @@ public class Shop {
 
     private int maxQueueSize;
 
+    private String openHour;
+
+    private String closeHour;
+
     @ManyToMany(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
     @JoinTable(
         name = "shop_product",
@@ -118,6 +122,24 @@ public class Shop {
 
     public Shop setQueues(Collection<Queue> queues) {
         this.queues = queues;
+        return this;
+    }
+
+    public String getOpenHour() {
+        return openHour;
+    }
+
+    public Shop setOpenHour(String openHour) {
+        this.openHour = openHour;
+        return this;
+    }
+
+    public String getCloseHour() {
+        return closeHour;
+    }
+
+    public Shop setCloseHour(String closeHour) {
+        this.closeHour = closeHour;
         return this;
     }
 }

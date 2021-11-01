@@ -19,6 +19,8 @@ public final class Transformer {
             .map(map -> new ShopDto().setId(shop.getId())
                 .setContact(shop.getContact())
                 .setLocation(shop.getLocation())
+                .setOpenHour(shop.getOpenHour())
+                .setCloseHour(shop.getCloseHour())
                 .setProducts(shop.getProducts().stream().map(Product::getId).collect(Collectors.toList()))
                 .setQueueSize(shop.getQueueSize())
                 .setMaxQueueSize(shop.getMaxQueueSize())
