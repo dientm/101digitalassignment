@@ -11,9 +11,6 @@ import com.digital.assignment.coreservice.service.QueueService;
 
 import dto.WorkingQueueDto;
 
-/**
- * @author dtran@fortna.com
- */
 @RestController
 @RequestMapping(value = "/queues")
 public class QueueController {

@@ -13,9 +13,6 @@ import com.digital.assignment.coreservice.service.UserService;
 
 import dto.UserDto;
 
-/**
- * @author dtran@fortna.com
- */
 @RestController
 @RequestMapping("/users")
 public class UserController {

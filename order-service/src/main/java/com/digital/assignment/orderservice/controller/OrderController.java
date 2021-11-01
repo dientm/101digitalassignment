@@ -13,9 +13,6 @@ import com.digital.assignment.orderservice.service.OrderService;
 
 import dto.OrderDto;
 
-/**
- * @author dtran@fortna.com
- */
 @RestController
 @RequestMapping("/orders")
 public class OrderController {

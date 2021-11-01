@@ -19,9 +19,6 @@ import com.digital.assignment.coreservice.service.ShopService;
 
 import dto.ShopDto;
 
-/**
- * @author dtran@fortna.com
- */
 @RestController
 @RequestMapping(value = "/shops")
 public class ShopController {

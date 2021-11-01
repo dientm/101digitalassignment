@@ -13,9 +13,6 @@ import com.digital.assignment.coreservice.service.ProductService;
 
 import dto.ProductDto;
 
-/**
- * @author dtran@fortna.com
- */
 @RestController
 @RequestMapping(value = "/products")
 public class ProductController {

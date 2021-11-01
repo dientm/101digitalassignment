@@ -10,9 +10,6 @@ import com.digital.assignment.coreservice.service.CoreService;
 
 import dto.ordering.Ordering;
 
-/**
- * @author dtran@fortna.com
- */
 @RestController
 @RequestMapping("/ordering")
 public class OrderingController {
