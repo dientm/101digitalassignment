@@ -1,0 +1,48 @@
+01-11-2021 14:39:58.217 [main] [user-service, ] INFO  c.d.a.c.ShopServiceApplicationTests.logStarting - Starting ShopServiceApplicationTests using Java 1.8.0_241 on DTRANW10 with PID 20512 (started by dtran in C:\Users\dtran\workspace\101digital\user-service)
+01-11-2021 14:39:58.220 [main] [user-service, ] INFO  c.d.a.c.ShopServiceApplicationTests.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+01-11-2021 14:39:59.303 [main] [user-service, ] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+01-11-2021 14:39:59.732 [main] [user-service, ] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 413 ms. Found 2 JPA repository interfaces.
+01-11-2021 14:40:00.270 [main] [user-service, ] INFO  o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=300d107c-a7b0-315b-aa9d-6c2b69986616
+01-11-2021 14:40:01.380 [main] [user-service, ] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+01-11-2021 14:40:01.497 [main] [user-service, ] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.27.Final
+01-11-2021 14:40:01.840 [main] [user-service, ] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+01-11-2021 14:40:03.760 [main] [user-service, ] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+01-11-2021 14:40:04.052 [main] [user-service, ] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+01-11-2021 14:40:04.115 [main] [user-service, ] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL9Dialect
+01-11-2021 14:40:05.926 [main] [user-service, ] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+01-11-2021 14:40:05.940 [main] [user-service, ] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+01-11-2021 14:40:08.248 [main] [user-service, ] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+01-11-2021 14:40:09.182 [main] [user-service, ] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+01-11-2021 14:40:16.831 [main] [user-service, ] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration.restTemplateDiscoveryClientOptionalArgs - Eureka HTTP Client uses RestTemplate.
+01-11-2021 14:40:19.749 [main] [user-service, ] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger.logWarning - Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+01-11-2021 14:40:19.781 [main] [user-service, ] INFO  o.s.c.n.eureka.InstanceInfoFactory.create - Setting initial instance status as: STARTING
+01-11-2021 14:40:19.885 [main] [user-service, ] INFO  c.netflix.discovery.DiscoveryClient.<init> - Initializing Eureka in region us-east-1
+01-11-2021 14:40:19.895 [main] [user-service, ] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+01-11-2021 14:40:19.937 [main] [user-service, ] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+01-11-2021 14:40:19.938 [main] [user-service, ] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+01-11-2021 14:40:19.938 [main] [user-service, ] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+01-11-2021 14:40:19.939 [main] [user-service, ] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+01-11-2021 14:40:19.939 [main] [user-service, ] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+01-11-2021 14:40:19.940 [main] [user-service, ] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: true
+01-11-2021 14:40:19.940 [main] [user-service, ] INFO  c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+01-11-2021 14:40:22.259 [main] [user-service, ] INFO  c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+01-11-2021 14:40:22.268 [main] [user-service, ] INFO  c.netflix.discovery.DiscoveryClient.initScheduledTasks - Starting heartbeat executor: renew interval is: 30
+01-11-2021 14:40:22.275 [main] [user-service, ] INFO  c.n.discovery.InstanceInfoReplicator.<init> - InstanceInfoReplicator onDemand update allowed rate per min is 4
+01-11-2021 14:40:22.288 [main] [user-service, ] INFO  c.netflix.discovery.DiscoveryClient.<init> - Discovery Client initialized at timestamp 1635752422285 with initial instances count: 6
+01-11-2021 14:40:22.295 [main] [user-service, ] INFO  o.s.c.n.e.s.EurekaServiceRegistry.register - Registering application USER-SERVICE with eureka with status UP
+01-11-2021 14:40:22.296 [main] [user-service, ] INFO  c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1635752422296, current=UP, previous=STARTING]
+01-11-2021 14:40:22.300 [DiscoveryClient-InstanceInfoReplicator-0] [user-service, ] INFO  c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_USER-SERVICE/DTRANW10.mshome.net:user-service:8081: registering service...
+01-11-2021 14:40:22.323 [main] [user-service, ] INFO  c.d.a.c.ShopServiceApplicationTests.logStarted - Started ShopServiceApplicationTests in 27.186 seconds (JVM running for 30.188)
+01-11-2021 14:40:22.380 [DiscoveryClient-InstanceInfoReplicator-0] [user-service, ] INFO  c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_USER-SERVICE/DTRANW10.mshome.net:user-service:8081 - registration status: 204
+01-11-2021 14:40:22.582 [SpringContextShutdownHook] [user-service, ] INFO  o.s.c.n.e.s.EurekaServiceRegistry.deregister - Unregistering application USER-SERVICE with eureka with status DOWN
+01-11-2021 14:40:22.583 [SpringContextShutdownHook] [user-service, ] INFO  c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1635752422583, current=DOWN, previous=UP]
+01-11-2021 14:40:22.584 [DiscoveryClient-InstanceInfoReplicator-0] [user-service, ] INFO  c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_USER-SERVICE/DTRANW10.mshome.net:user-service:8081: registering service...
+01-11-2021 14:40:22.589 [SpringContextShutdownHook] [user-service, ] INFO  o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+01-11-2021 14:40:22.591 [SpringContextShutdownHook] [user-service, ] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+01-11-2021 14:40:22.595 [DiscoveryClient-InstanceInfoReplicator-0] [user-service, ] INFO  c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_USER-SERVICE/DTRANW10.mshome.net:user-service:8081 - registration status: 204
+01-11-2021 14:40:22.598 [SpringContextShutdownHook] [user-service, ] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+01-11-2021 14:40:22.615 [SpringContextShutdownHook] [user-service, ] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+01-11-2021 14:40:22.616 [SpringContextShutdownHook] [user-service, ] INFO  c.netflix.discovery.DiscoveryClient.shutdown - Shutting down DiscoveryClient ...
+01-11-2021 14:40:25.619 [SpringContextShutdownHook] [user-service, ] INFO  c.netflix.discovery.DiscoveryClient.unregister - Unregistering ...
+01-11-2021 14:40:25.625 [SpringContextShutdownHook] [user-service, ] INFO  c.netflix.discovery.DiscoveryClient.unregister - DiscoveryClient_USER-SERVICE/DTRANW10.mshome.net:user-service:8081 - deregister  status: 200
+01-11-2021 14:40:25.630 [SpringContextShutdownHook] [user-service, ] INFO  c.netflix.discovery.DiscoveryClient.shutdown - Completed shut down of DiscoveryClient
