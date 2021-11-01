@@ -1,0 +1,244 @@
+{
+	"info": {
+		"_postman_id": "d889edb9-35b7-4d3b-9c7e-971b2fbf39f1",
+		"name": "coffee-shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "01. Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"ptrinh10\",\r\n    \"password\" : \"123456\",\r\n    \"role\" : \"USER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "02. Get user Information",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiVVNFUiIsImlkIjoyMCwidXNlcm5hbWUiOiJwdHJpbmgxMCIsInN1YiI6InB0cmluaDEwIiwiaWF0IjoxNjM1NzU1OTMyLCJleHAiOjE2MzU4NDIzMzJ9.TyLNntq26oTYjvq2JfPPPqoq8yUFVS9hAwsY3hMVjhuIbpj6u1Q-idNSUEwjVjYXuht7MpX7k6pHjIdRg0AaMw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/users/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"users",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "03. Create product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiVVNFUiIsImlkIjoyMCwidXNlcm5hbWUiOiJwdHJpbmgxMCIsInN1YiI6InB0cmluaDEwIiwiaWF0IjoxNjM1NzU1OTMyLCJleHAiOjE2MzU4NDIzMzJ9.TyLNntq26oTYjvq2JfPPPqoq8yUFVS9hAwsY3hMVjhuIbpj6u1Q-idNSUEwjVjYXuht7MpX7k6pHjIdRg0AaMw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Capucino\",\r\n    \"price\": \"12.0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "04. Get Product Information",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiVVNFUiIsImlkIjoyMCwidXNlcm5hbWUiOiJwdHJpbmgxMCIsInN1YiI6InB0cmluaDEwIiwiaWF0IjoxNjM1NzU1OTMyLCJleHAiOjE2MzU4NDIzMzJ9.TyLNntq26oTYjvq2JfPPPqoq8yUFVS9hAwsY3hMVjhuIbpj6u1Q-idNSUEwjVjYXuht7MpX7k6pHjIdRg0AaMw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/products/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"products",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " 05. Create new Shop",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiVVNFUiIsImlkIjoyMCwidXNlcm5hbWUiOiJwdHJpbmgxMCIsInN1YiI6InB0cmluaDEwIiwiaWF0IjoxNjM1NzU1OTMyLCJleHAiOjE2MzU4NDIzMzJ9.TyLNntq26oTYjvq2JfPPPqoq8yUFVS9hAwsY3hMVjhuIbpj6u1Q-idNSUEwjVjYXuht7MpX7k6pHjIdRg0AaMw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Stumptown Coffee Roasters\",\r\n    \"location\": \"Portland\",\r\n    \"maxQueueSize\": 10,\r\n    \"queueSize\": 3,\r\n    \"contact\": \"855-711-3385\",\r\n    \"products\" : [\r\n        5\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/shops",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"shops"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "06. Get shop information",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiVVNFUiIsImlkIjoyMCwidXNlcm5hbWUiOiJwdHJpbmgxMCIsInN1YiI6InB0cmluaDEwIiwiaWF0IjoxNjM1NzU1OTMyLCJleHAiOjE2MzU4NDIzMzJ9.TyLNntq26oTYjvq2JfPPPqoq8yUFVS9hAwsY3hMVjhuIbpj6u1Q-idNSUEwjVjYXuht7MpX7k6pHjIdRg0AaMw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/shops/24",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"shops",
+						"24"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "07. Place an order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiVVNFUiIsImlkIjoyMCwidXNlcm5hbWUiOiJwdHJpbmgxMCIsInN1YiI6InB0cmluaDEwIiwiaWF0IjoxNjM1NzU1OTMyLCJleHAiOjE2MzU4NDIzMzJ9.TyLNntq26oTYjvq2JfPPPqoq8yUFVS9hAwsY3hMVjhuIbpj6u1Q-idNSUEwjVjYXuht7MpX7k6pHjIdRg0AaMw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": 12,\r\n    \"shopId\": 24,\r\n    \"items\": [\r\n        {\r\n            \"productId\": 5,\r\n            \"qty\": 1\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "08. Order information",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiVVNFUiIsImlkIjoyMCwidXNlcm5hbWUiOiJwdHJpbmgxMCIsInN1YiI6InB0cmluaDEwIiwiaWF0IjoxNjM1NzU1OTMyLCJleHAiOjE2MzU4NDIzMzJ9.TyLNntq26oTYjvq2JfPPPqoq8yUFVS9hAwsY3hMVjhuIbpj6u1Q-idNSUEwjVjYXuht7MpX7k6pHjIdRg0AaMw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/orders/119",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"orders",
+						"119"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
