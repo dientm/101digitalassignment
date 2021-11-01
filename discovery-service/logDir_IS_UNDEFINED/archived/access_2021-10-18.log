@@ -1,0 +1,6 @@
+2021-10-18:07:04:37 +0700 127.0.0.1 - GET /api/v1/shops?include=products HTTP/1.1 200 1277 432 -  
+2021-10-18:07:04:52 +0700 127.0.0.1 - GET /api/v1/shops?include=products,queues HTTP/1.1 200 1509 37 -  
+2021-10-18:07:09:15 +0700 0:0:0:0:0:0:0:1 - GET /api/v1/queues HTTP/1.1 404 51 16 -  
+2021-10-18:07:09:19 +0700 0:0:0:0:0:0:0:1 - GET /api/v1/queue HTTP/1.1 404 50 5 -  
+2021-10-18:07:09:23 +0700 0:0:0:0:0:0:0:1 - GET /api/v1/products HTTP/1.1 404 53 6 -  
+2021-10-18:07:10:33 +0700 127.0.0.1 - GET /api/v1/shops?include=products,queues HTTP/1.1 200 1509 28 -  

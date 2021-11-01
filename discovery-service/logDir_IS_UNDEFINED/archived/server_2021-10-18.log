@@ -1,0 +1,492 @@
+18-10-2021 07:02:14.951 [main] [shop-service, ] INFO  c.d.a.s.ShopServiceApplication.logStarting - Starting ShopServiceApplication using Java 11.0.11 on DTRANW10 with PID 24448 (C:\Users\dtran\workspace\101digital\shop-service\target\classes started by dtran in C:\Users\dtran\workspace\101digital\discovery-service)
+18-10-2021 07:02:14.966 [main] [shop-service, ] INFO  c.d.a.s.ShopServiceApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+18-10-2021 07:02:15.816 [main] [shop-service, ] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+18-10-2021 07:02:15.896 [main] [shop-service, ] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 72 ms. Found 2 JPA repository interfaces.
+18-10-2021 07:02:16.191 [main] [shop-service, ] INFO  o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=a85736cb-34c1-3369-b333-4747b71f4e1e
+18-10-2021 07:02:16.562 [main] [shop-service, ] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+18-10-2021 07:02:16.571 [main] [shop-service, ] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+18-10-2021 07:02:16.572 [main] [shop-service, ] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+18-10-2021 07:02:16.572 [main] [shop-service, ] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.41]
+18-10-2021 07:02:16.758 [main] [shop-service, ] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+18-10-2021 07:02:16.758 [main] [shop-service, ] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1754 ms
+18-10-2021 07:02:16.817 [main] [shop-service, ] INFO  n.r.s.b.l.a.LogbackAccessContext.configureWithCauseThrowing - Configured the Logback-access: context=[default], config=[classpath:logback-access-spring.xml]
+18-10-2021 07:02:17.024 [main] [shop-service, ] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+18-10-2021 07:02:18.311 [main] [shop-service, ] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+18-10-2021 07:02:23.310 [main] [shop-service, ] INFO  l.lockservice.StandardLockService.info - Successfully acquired change log lock
+18-10-2021 07:02:23.683 [main] [shop-service, ] ERROR l.p.core.xml.XMLChangeLogSAXParser$1.severe - The markup in the document following the root element must be well-formed.
+18-10-2021 07:02:23.690 [main] [shop-service, ] INFO  l.lockservice.StandardLockService.info - Successfully released change log lock
+18-10-2021 07:02:23.697 [main] [shop-service, ] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.ChangeLogParseException: Error parsing line 3 column 6 of classpath:db/changelog/changelog.xml: The markup in the document following the root element must be well-formed.
+18-10-2021 07:02:23.701 [main] [shop-service, ] INFO  o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+18-10-2021 07:02:23.739 [main] [shop-service, ] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+18-10-2021 07:02:23.774 [main] [shop-service, ] ERROR o.s.boot.SpringApplication.reportFailure - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.ChangeLogParseException: Error parsing line 3 column 6 of classpath:db/changelog/changelog.xml: The markup in the document following the root element must be well-formed.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1159)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.digital.assignment.shopservice.ShopServiceApplication.main(ShopServiceApplication.java:18)
+Caused by: liquibase.exception.ChangeLogParseException: Error parsing line 3 column 6 of classpath:db/changelog/changelog.xml: The markup in the document following the root element must be well-formed.
+	at liquibase.parser.core.xml.XMLChangeLogSAXParser.parseToNode(XMLChangeLogSAXParser.java:120)
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:15)
+	at liquibase.Liquibase.getDatabaseChangeLog(Liquibase.java:216)
+	at liquibase.Liquibase.update(Liquibase.java:189)
+	at liquibase.Liquibase.update(Liquibase.java:178)
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:368)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:316)
+	at org.springframework.boot.autoconfigure.liquibase.DataSourceClosingSpringLiquibase.afterPropertiesSet(DataSourceClosingSpringLiquibase.java:46)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	... 19 common frames omitted
+Caused by: org.xml.sax.SAXParseException: The markup in the document following the root element must be well-formed.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1471)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$TrailingMiscDriver.next(XMLDocumentScannerImpl.java:1398)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:112)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:534)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:888)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1216)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:635)
+	at liquibase.parser.core.xml.XMLChangeLogSAXParser.parseToNode(XMLChangeLogSAXParser.java:112)
+	... 28 common frames omitted
+18-10-2021 07:03:52.143 [main] [shop-service, ] INFO  c.d.a.s.ShopServiceApplication.logStarting - Starting ShopServiceApplication using Java 11.0.11 on DTRANW10 with PID 2620 (C:\Users\dtran\workspace\101digital\shop-service\target\classes started by dtran in C:\Users\dtran\workspace\101digital\discovery-service)
+18-10-2021 07:03:52.150 [main] [shop-service, ] INFO  c.d.a.s.ShopServiceApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+18-10-2021 07:03:52.970 [main] [shop-service, ] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+18-10-2021 07:03:53.065 [main] [shop-service, ] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 85 ms. Found 2 JPA repository interfaces.
+18-10-2021 07:03:53.335 [main] [shop-service, ] INFO  o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=a85736cb-34c1-3369-b333-4747b71f4e1e
+18-10-2021 07:03:53.698 [main] [shop-service, ] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+18-10-2021 07:03:53.707 [main] [shop-service, ] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+18-10-2021 07:03:53.708 [main] [shop-service, ] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+18-10-2021 07:03:53.709 [main] [shop-service, ] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.41]
+18-10-2021 07:03:53.916 [main] [shop-service, ] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+18-10-2021 07:03:53.916 [main] [shop-service, ] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1728 ms
+18-10-2021 07:03:53.967 [main] [shop-service, ] INFO  n.r.s.b.l.a.LogbackAccessContext.configureWithCauseThrowing - Configured the Logback-access: context=[default], config=[classpath:logback-access-spring.xml]
+18-10-2021 07:03:54.030 [main] [shop-service, ] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+18-10-2021 07:03:54.139 [main] [shop-service, ] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+18-10-2021 07:03:57.195 [main] [shop-service, ] INFO  l.lockservice.StandardLockService.info - Successfully acquired change log lock
+18-10-2021 07:03:57.395 [main] [shop-service, ] ERROR l.p.core.xml.XMLChangeLogSAXParser$1.severe - The markup in the document following the root element must be well-formed.
+18-10-2021 07:03:57.401 [main] [shop-service, ] INFO  l.lockservice.StandardLockService.info - Successfully released change log lock
+18-10-2021 07:03:57.404 [main] [shop-service, ] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.ChangeLogParseException: Error parsing line 3 column 6 of classpath:db/changelog/changelog.xml: The markup in the document following the root element must be well-formed.
+18-10-2021 07:03:57.407 [main] [shop-service, ] INFO  o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+18-10-2021 07:03:57.418 [main] [shop-service, ] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+18-10-2021 07:03:57.453 [main] [shop-service, ] ERROR o.s.boot.SpringApplication.reportFailure - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.ChangeLogParseException: Error parsing line 3 column 6 of classpath:db/changelog/changelog.xml: The markup in the document following the root element must be well-formed.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1159)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.digital.assignment.shopservice.ShopServiceApplication.main(ShopServiceApplication.java:18)
+Caused by: liquibase.exception.ChangeLogParseException: Error parsing line 3 column 6 of classpath:db/changelog/changelog.xml: The markup in the document following the root element must be well-formed.
+	at liquibase.parser.core.xml.XMLChangeLogSAXParser.parseToNode(XMLChangeLogSAXParser.java:120)
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:15)
+	at liquibase.Liquibase.getDatabaseChangeLog(Liquibase.java:216)
+	at liquibase.Liquibase.update(Liquibase.java:189)
+	at liquibase.Liquibase.update(Liquibase.java:178)
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:368)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:316)
+	at org.springframework.boot.autoconfigure.liquibase.DataSourceClosingSpringLiquibase.afterPropertiesSet(DataSourceClosingSpringLiquibase.java:46)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	... 19 common frames omitted
+Caused by: org.xml.sax.SAXParseException: The markup in the document following the root element must be well-formed.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1471)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$TrailingMiscDriver.next(XMLDocumentScannerImpl.java:1398)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:112)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:534)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:888)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1216)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:635)
+	at liquibase.parser.core.xml.XMLChangeLogSAXParser.parseToNode(XMLChangeLogSAXParser.java:112)
+	... 28 common frames omitted
+18-10-2021 07:04:16.970 [main] [shop-service, ] INFO  c.d.a.s.ShopServiceApplication.logStarting - Starting ShopServiceApplication using Java 11.0.11 on DTRANW10 with PID 25012 (C:\Users\dtran\workspace\101digital\shop-service\target\classes started by dtran in C:\Users\dtran\workspace\101digital\discovery-service)
+18-10-2021 07:04:16.974 [main] [shop-service, ] INFO  c.d.a.s.ShopServiceApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+18-10-2021 07:04:17.563 [main] [shop-service, ] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+18-10-2021 07:04:17.642 [main] [shop-service, ] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 72 ms. Found 2 JPA repository interfaces.
+18-10-2021 07:04:17.848 [main] [shop-service, ] INFO  o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=a85736cb-34c1-3369-b333-4747b71f4e1e
+18-10-2021 07:04:18.143 [main] [shop-service, ] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+18-10-2021 07:04:18.152 [main] [shop-service, ] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+18-10-2021 07:04:18.152 [main] [shop-service, ] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+18-10-2021 07:04:18.152 [main] [shop-service, ] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.41]
+18-10-2021 07:04:18.335 [main] [shop-service, ] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+18-10-2021 07:04:18.335 [main] [shop-service, ] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1330 ms
+18-10-2021 07:04:18.382 [main] [shop-service, ] INFO  n.r.s.b.l.a.LogbackAccessContext.configureWithCauseThrowing - Configured the Logback-access: context=[default], config=[classpath:logback-access-spring.xml]
+18-10-2021 07:04:18.435 [main] [shop-service, ] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+18-10-2021 07:04:18.501 [main] [shop-service, ] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+18-10-2021 07:04:21.577 [main] [shop-service, ] INFO  l.lockservice.StandardLockService.info - Successfully acquired change log lock
+18-10-2021 07:04:21.817 [main] [shop-service, ] INFO  l.c.StandardChangeLogHistoryService.info - Reading from public.databasechangelog
+18-10-2021 07:04:21.824 [main] [shop-service, ] INFO  l.lockservice.StandardLockService.info - Successfully released change log lock
+18-10-2021 07:04:21.825 [main] [shop-service, ] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+18-10-2021 07:04:21.832 [main] [shop-service, ] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+18-10-2021 07:04:21.928 [main] [shop-service, ] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+18-10-2021 07:04:21.985 [main] [shop-service, ] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.27.Final
+18-10-2021 07:04:22.143 [main] [shop-service, ] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+18-10-2021 07:04:22.245 [main] [shop-service, ] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-2 - Starting...
+18-10-2021 07:04:22.252 [main] [shop-service, ] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-2 - Start completed.
+18-10-2021 07:04:22.261 [main] [shop-service, ] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL9Dialect
+18-10-2021 07:04:22.976 [main] [shop-service, ] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18-10-2021 07:04:22.990 [main] [shop-service, ] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+18-10-2021 07:04:23.074 [main] [shop-service, ] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18-10-2021 07:04:24.186 [main] [shop-service, ] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword - 
+
+Using generated security password: 3ca05ca0-7004-4efb-9464-8390cbe078b1
+
+18-10-2021 07:04:24.264 [main] [shop-service, ] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6497bc28, org.springframework.security.web.context.SecurityContextPersistenceFilter@5fd81b2c, org.springframework.security.web.header.HeaderWriterFilter@7a2c95e2, org.springframework.web.filter.CorsFilter@21e470cc, org.springframework.security.web.authentication.logout.LogoutFilter@27153ba2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4bbddcc8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@13acb4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@160ecb8f, org.springframework.security.web.session.SessionManagementFilter@194ef183, org.springframework.security.web.access.ExceptionTranslationFilter@413069a0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1844e563]
+18-10-2021 07:04:24.416 [main] [shop-service, ] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+18-10-2021 07:04:30.182 [main] [shop-service, ] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class java.sql.Timestamp
+18-10-2021 07:04:30.223 [main] [shop-service, ] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class java.time.OffsetDateTime
+18-10-2021 07:04:30.223 [main] [shop-service, ] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class java.sql.Date
+18-10-2021 07:04:30.223 [main] [shop-service, ] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class java.time.Instant
+18-10-2021 07:04:30.223 [main] [shop-service, ] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class java.sql.Time
+18-10-2021 07:04:30.224 [main] [shop-service, ] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class java.net.URL
+18-10-2021 07:04:30.224 [main] [shop-service, ] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class java.util.Date
+18-10-2021 07:04:30.224 [main] [shop-service, ] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class java.util.TimeZone
+18-10-2021 07:04:30.225 [main] [shop-service, ] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class com.yahoo.elide.datastores.aggregation.timegrains.Year
+18-10-2021 07:04:30.227 [main] [shop-service, ] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class com.yahoo.elide.datastores.aggregation.timegrains.Minute
+18-10-2021 07:04:30.229 [main] [shop-service, ] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class com.yahoo.elide.datastores.aggregation.timegrains.Second
+18-10-2021 07:04:30.229 [main] [shop-service, ] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class com.yahoo.elide.datastores.aggregation.timegrains.Time
+18-10-2021 07:04:30.231 [main] [shop-service, ] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class com.yahoo.elide.datastores.aggregation.timegrains.Day
+18-10-2021 07:04:30.232 [main] [shop-service, ] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class com.yahoo.elide.datastores.aggregation.timegrains.Month
+18-10-2021 07:04:30.232 [main] [shop-service, ] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class com.yahoo.elide.datastores.aggregation.timegrains.Hour
+18-10-2021 07:04:30.234 [main] [shop-service, ] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class com.yahoo.elide.datastores.aggregation.timegrains.ISOWeek
+18-10-2021 07:04:30.235 [main] [shop-service, ] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class com.yahoo.elide.datastores.aggregation.timegrains.Week
+18-10-2021 07:04:30.237 [main] [shop-service, ] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class com.yahoo.elide.datastores.aggregation.timegrains.Quarter
+18-10-2021 07:04:30.663 [main] [shop-service, ] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration.restTemplateDiscoveryClientOptionalArgs - Eureka HTTP Client uses RestTemplate.
+18-10-2021 07:04:31.949 [main] [shop-service, ] INFO  o.s.c.n.eureka.InstanceInfoFactory.create - Setting initial instance status as: STARTING
+18-10-2021 07:04:31.970 [main] [shop-service, ] INFO  c.netflix.discovery.DiscoveryClient.<init> - Initializing Eureka in region us-east-1
+18-10-2021 07:04:31.974 [main] [shop-service, ] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+18-10-2021 07:04:31.994 [main] [shop-service, ] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+18-10-2021 07:04:31.994 [main] [shop-service, ] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+18-10-2021 07:04:31.995 [main] [shop-service, ] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+18-10-2021 07:04:31.995 [main] [shop-service, ] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+18-10-2021 07:04:31.995 [main] [shop-service, ] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+18-10-2021 07:04:31.995 [main] [shop-service, ] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: true
+18-10-2021 07:04:31.995 [main] [shop-service, ] INFO  c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+18-10-2021 07:04:32.493 [main] [shop-service, ] INFO  c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+18-10-2021 07:04:32.496 [main] [shop-service, ] INFO  c.netflix.discovery.DiscoveryClient.initScheduledTasks - Starting heartbeat executor: renew interval is: 30
+18-10-2021 07:04:32.500 [main] [shop-service, ] INFO  c.n.discovery.InstanceInfoReplicator.<init> - InstanceInfoReplicator onDemand update allowed rate per min is 4
+18-10-2021 07:04:32.521 [main] [shop-service, ] INFO  c.netflix.discovery.DiscoveryClient.<init> - Discovery Client initialized at timestamp 1634515472506 with initial instances count: 0
+18-10-2021 07:04:32.525 [main] [shop-service, ] INFO  o.s.c.n.e.s.EurekaServiceRegistry.register - Registering application SHOP-SERVICE with eureka with status UP
+18-10-2021 07:04:32.526 [main] [shop-service, ] INFO  c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1634515472526, current=UP, previous=STARTING]
+18-10-2021 07:04:32.528 [DiscoveryClient-InstanceInfoReplicator-0] [shop-service, ] INFO  c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_SHOP-SERVICE/DTRANW10.mshome.net:shop-service:8080: registering service...
+18-10-2021 07:04:32.528 [main] [shop-service, ] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+18-10-2021 07:04:32.576 [main] [shop-service, ] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+18-10-2021 07:04:32.577 [main] [shop-service, ] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration.onApplicationEvent - Updating port to 8080
+18-10-2021 07:04:32.634 [DiscoveryClient-InstanceInfoReplicator-0] [shop-service, ] INFO  c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_SHOP-SERVICE/DTRANW10.mshome.net:shop-service:8080 - registration status: 204
+18-10-2021 07:04:33.982 [main] [shop-service, ] INFO  c.d.a.s.ShopServiceApplication.logStarted - Started ShopServiceApplication in 18.948 seconds (JVM running for 20.858)
+18-10-2021 07:04:36.676 [http-nio-8080-exec-3] [shop-service, ] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18-10-2021 07:04:36.676 [http-nio-8080-exec-3] [shop-service, ] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+18-10-2021 07:04:36.677 [http-nio-8080-exec-3] [shop-service, ] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 0 ms
+18-10-2021 07:04:36.926 [task-1] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select shop0_.id as id1_2_, shop0_.contact as contact2_2_, shop0_.location as location3_2_, shop0_.max_queue_size as max_queu4_2_, shop0_.name as name5_2_, shop0_.queue_size as queue_si6_2_ from shop shop0_ limit ?
+18-10-2021 07:04:36.959 [task-1] [shop-service, ] DEBUG c.y.elide.core.utils.TimedFunction.get - Query Hash: 475145595	Time spent: 42
+18-10-2021 07:04:36.982 [task-1] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select products0_.shops_id as shops_id1_3_0_, products0_.products_id as products2_3_0_, product1_.id as id1_0_1_, product1_.name as name2_0_1_, product1_.price as price3_0_1_ from shop_products products0_ inner join product product1_ on products0_.products_id=product1_.id where products0_.shops_id=?
+18-10-2021 07:04:36.984 [task-1] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [1]
+18-10-2021 07:04:36.999 [task-1] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select products0_.shops_id as shops_id1_3_0_, products0_.products_id as products2_3_0_, product1_.id as id1_0_1_, product1_.name as name2_0_1_, product1_.price as price3_0_1_ from shop_products products0_ inner join product product1_ on products0_.products_id=product1_.id where products0_.shops_id=?
+18-10-2021 07:04:36.999 [task-1] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [2]
+18-10-2021 07:04:37.000 [task-1] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select products0_.shops_id as shops_id1_3_0_, products0_.products_id as products2_3_0_, product1_.id as id1_0_1_, product1_.name as name2_0_1_, product1_.price as price3_0_1_ from shop_products products0_ inner join product product1_ on products0_.products_id=product1_.id where products0_.shops_id=?
+18-10-2021 07:04:37.000 [task-1] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [3]
+18-10-2021 07:04:37.001 [task-1] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select products0_.shops_id as shops_id1_3_0_, products0_.products_id as products2_3_0_, product1_.id as id1_0_1_, product1_.name as name2_0_1_, product1_.price as price3_0_1_ from shop_products products0_ inner join product product1_ on products0_.products_id=product1_.id where products0_.shops_id=?
+18-10-2021 07:04:37.001 [task-1] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [4]
+18-10-2021 07:04:37.006 [task-1] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select queues0_.shop_id as shop_id3_1_0_, queues0_.id as id1_1_0_, queues0_.id as id1_1_1_, queues0_.max_number as max_numb2_1_1_, queues0_.shop_id as shop_id3_1_1_ from queue queues0_ where queues0_.shop_id=?
+18-10-2021 07:04:37.006 [task-1] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [1]
+18-10-2021 07:04:37.009 [task-1] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select queues0_.shop_id as shop_id3_1_0_, queues0_.id as id1_1_0_, queues0_.id as id1_1_1_, queues0_.max_number as max_numb2_1_1_, queues0_.shop_id as shop_id3_1_1_ from queue queues0_ where queues0_.shop_id=?
+18-10-2021 07:04:37.010 [task-1] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [4]
+18-10-2021 07:04:37.011 [task-1] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select queues0_.shop_id as shop_id3_1_0_, queues0_.id as id1_1_0_, queues0_.id as id1_1_1_, queues0_.max_number as max_numb2_1_1_, queues0_.shop_id as shop_id3_1_1_ from queue queues0_ where queues0_.shop_id=?
+18-10-2021 07:04:37.012 [task-1] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [3]
+18-10-2021 07:04:37.013 [task-1] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select queues0_.shop_id as shop_id3_1_0_, queues0_.id as id1_1_0_, queues0_.id as id1_1_1_, queues0_.max_number as max_numb2_1_1_, queues0_.shop_id as shop_id3_1_1_ from queue queues0_ where queues0_.shop_id=?
+18-10-2021 07:04:37.013 [task-1] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [2]
+18-10-2021 07:04:37.018 [task-1] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select shops0_.products_id as products2_3_0_, shops0_.shops_id as shops_id1_3_0_, shop1_.id as id1_2_1_, shop1_.contact as contact2_2_1_, shop1_.location as location3_2_1_, shop1_.max_queue_size as max_queu4_2_1_, shop1_.name as name5_2_1_, shop1_.queue_size as queue_si6_2_1_ from shop_products shops0_ inner join shop shop1_ on shops0_.shops_id=shop1_.id where shops0_.products_id=?
+18-10-2021 07:04:37.018 [task-1] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [1]
+18-10-2021 07:04:37.023 [task-1] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select shops0_.products_id as products2_3_0_, shops0_.shops_id as shops_id1_3_0_, shop1_.id as id1_2_1_, shop1_.contact as contact2_2_1_, shop1_.location as location3_2_1_, shop1_.max_queue_size as max_queu4_2_1_, shop1_.name as name5_2_1_, shop1_.queue_size as queue_si6_2_1_ from shop_products shops0_ inner join shop shop1_ on shops0_.shops_id=shop1_.id where shops0_.products_id=?
+18-10-2021 07:04:37.024 [task-1] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [2]
+18-10-2021 07:04:52.462 [task-2] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select shop0_.id as id1_2_, shop0_.contact as contact2_2_, shop0_.location as location3_2_, shop0_.max_queue_size as max_queu4_2_, shop0_.name as name5_2_, shop0_.queue_size as queue_si6_2_ from shop shop0_ limit ?
+18-10-2021 07:04:52.463 [task-2] [shop-service, ] DEBUG c.y.elide.core.utils.TimedFunction.get - Query Hash: 525201128	Time spent: 1
+18-10-2021 07:04:52.464 [task-2] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select products0_.shops_id as shops_id1_3_0_, products0_.products_id as products2_3_0_, product1_.id as id1_0_1_, product1_.name as name2_0_1_, product1_.price as price3_0_1_ from shop_products products0_ inner join product product1_ on products0_.products_id=product1_.id where products0_.shops_id=?
+18-10-2021 07:04:52.464 [task-2] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [1]
+18-10-2021 07:04:52.466 [task-2] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select products0_.shops_id as shops_id1_3_0_, products0_.products_id as products2_3_0_, product1_.id as id1_0_1_, product1_.name as name2_0_1_, product1_.price as price3_0_1_ from shop_products products0_ inner join product product1_ on products0_.products_id=product1_.id where products0_.shops_id=?
+18-10-2021 07:04:52.466 [task-2] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [2]
+18-10-2021 07:04:52.468 [task-2] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select products0_.shops_id as shops_id1_3_0_, products0_.products_id as products2_3_0_, product1_.id as id1_0_1_, product1_.name as name2_0_1_, product1_.price as price3_0_1_ from shop_products products0_ inner join product product1_ on products0_.products_id=product1_.id where products0_.shops_id=?
+18-10-2021 07:04:52.468 [task-2] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [3]
+18-10-2021 07:04:52.469 [task-2] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select products0_.shops_id as shops_id1_3_0_, products0_.products_id as products2_3_0_, product1_.id as id1_0_1_, product1_.name as name2_0_1_, product1_.price as price3_0_1_ from shop_products products0_ inner join product product1_ on products0_.products_id=product1_.id where products0_.shops_id=?
+18-10-2021 07:04:52.469 [task-2] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [4]
+18-10-2021 07:04:52.470 [task-2] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select queues0_.shop_id as shop_id3_1_0_, queues0_.id as id1_1_0_, queues0_.id as id1_1_1_, queues0_.max_number as max_numb2_1_1_, queues0_.shop_id as shop_id3_1_1_ from queue queues0_ where queues0_.shop_id=?
+18-10-2021 07:04:52.471 [task-2] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [1]
+18-10-2021 07:04:52.472 [task-2] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select queues0_.shop_id as shop_id3_1_0_, queues0_.id as id1_1_0_, queues0_.id as id1_1_1_, queues0_.max_number as max_numb2_1_1_, queues0_.shop_id as shop_id3_1_1_ from queue queues0_ where queues0_.shop_id=?
+18-10-2021 07:04:52.473 [task-2] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [4]
+18-10-2021 07:04:52.475 [task-2] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select queues0_.shop_id as shop_id3_1_0_, queues0_.id as id1_1_0_, queues0_.id as id1_1_1_, queues0_.max_number as max_numb2_1_1_, queues0_.shop_id as shop_id3_1_1_ from queue queues0_ where queues0_.shop_id=?
+18-10-2021 07:04:52.475 [task-2] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [3]
+18-10-2021 07:04:52.477 [task-2] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select queues0_.shop_id as shop_id3_1_0_, queues0_.id as id1_1_0_, queues0_.id as id1_1_1_, queues0_.max_number as max_numb2_1_1_, queues0_.shop_id as shop_id3_1_1_ from queue queues0_ where queues0_.shop_id=?
+18-10-2021 07:04:52.477 [task-2] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [2]
+18-10-2021 07:04:52.479 [task-2] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select shops0_.products_id as products2_3_0_, shops0_.shops_id as shops_id1_3_0_, shop1_.id as id1_2_1_, shop1_.contact as contact2_2_1_, shop1_.location as location3_2_1_, shop1_.max_queue_size as max_queu4_2_1_, shop1_.name as name5_2_1_, shop1_.queue_size as queue_si6_2_1_ from shop_products shops0_ inner join shop shop1_ on shops0_.shops_id=shop1_.id where shops0_.products_id=?
+18-10-2021 07:04:52.479 [task-2] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [1]
+18-10-2021 07:04:52.481 [task-2] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select shops0_.products_id as products2_3_0_, shops0_.shops_id as shops_id1_3_0_, shop1_.id as id1_2_1_, shop1_.contact as contact2_2_1_, shop1_.location as location3_2_1_, shop1_.max_queue_size as max_queu4_2_1_, shop1_.name as name5_2_1_, shop1_.queue_size as queue_si6_2_1_ from shop_products shops0_ inner join shop shop1_ on shops0_.shops_id=shop1_.id where shops0_.products_id=?
+18-10-2021 07:04:52.481 [task-2] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [2]
+18-10-2021 07:05:02.497 [DiscoveryClient-CacheRefreshExecutor-0] [shop-service, ] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+18-10-2021 07:05:02.497 [DiscoveryClient-CacheRefreshExecutor-0] [shop-service, ] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+18-10-2021 07:05:02.498 [DiscoveryClient-CacheRefreshExecutor-0] [shop-service, ] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+18-10-2021 07:05:02.498 [DiscoveryClient-CacheRefreshExecutor-0] [shop-service, ] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+18-10-2021 07:05:02.498 [DiscoveryClient-CacheRefreshExecutor-0] [shop-service, ] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+18-10-2021 07:05:02.498 [DiscoveryClient-CacheRefreshExecutor-0] [shop-service, ] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: false
+18-10-2021 07:05:02.498 [DiscoveryClient-CacheRefreshExecutor-0] [shop-service, ] INFO  c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+18-10-2021 07:05:02.508 [DiscoveryClient-CacheRefreshExecutor-0] [shop-service, ] INFO  c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+18-10-2021 07:09:15.691 [task-3] [shop-service, ] DEBUG com.yahoo.elide.Elide.mapError - No error mapping present for class com.yahoo.elide.core.exceptions.InvalidCollectionException
+18-10-2021 07:09:15.694 [task-3] [shop-service, ] DEBUG com.yahoo.elide.Elide.handleRuntimeException - Caught HTTP status exception
+com.yahoo.elide.core.exceptions.InvalidCollectionException: Unknown collection queues
+18-10-2021 07:09:19.610 [task-4] [shop-service, ] DEBUG com.yahoo.elide.Elide.mapError - No error mapping present for class com.yahoo.elide.core.exceptions.InvalidCollectionException
+18-10-2021 07:09:19.610 [task-4] [shop-service, ] DEBUG com.yahoo.elide.Elide.handleRuntimeException - Caught HTTP status exception
+com.yahoo.elide.core.exceptions.InvalidCollectionException: Unknown collection queue
+18-10-2021 07:09:23.013 [task-5] [shop-service, ] DEBUG com.yahoo.elide.Elide.mapError - No error mapping present for class com.yahoo.elide.core.exceptions.InvalidCollectionException
+18-10-2021 07:09:23.013 [task-5] [shop-service, ] DEBUG com.yahoo.elide.Elide.handleRuntimeException - Caught HTTP status exception
+com.yahoo.elide.core.exceptions.InvalidCollectionException: Unknown collection products
+18-10-2021 07:09:32.014 [AsyncResolver-bootstrap-executor-0] [shop-service, ] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+18-10-2021 07:10:33.596 [task-6] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select shop0_.id as id1_2_, shop0_.contact as contact2_2_, shop0_.location as location3_2_, shop0_.max_queue_size as max_queu4_2_, shop0_.name as name5_2_, shop0_.queue_size as queue_si6_2_ from shop shop0_ limit ?
+18-10-2021 07:10:33.598 [task-6] [shop-service, ] DEBUG c.y.elide.core.utils.TimedFunction.get - Query Hash: 1494431940	Time spent: 2
+18-10-2021 07:10:33.599 [task-6] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select products0_.shops_id as shops_id1_3_0_, products0_.products_id as products2_3_0_, product1_.id as id1_0_1_, product1_.name as name2_0_1_, product1_.price as price3_0_1_ from shop_products products0_ inner join product product1_ on products0_.products_id=product1_.id where products0_.shops_id=?
+18-10-2021 07:10:33.599 [task-6] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [1]
+18-10-2021 07:10:33.600 [task-6] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select products0_.shops_id as shops_id1_3_0_, products0_.products_id as products2_3_0_, product1_.id as id1_0_1_, product1_.name as name2_0_1_, product1_.price as price3_0_1_ from shop_products products0_ inner join product product1_ on products0_.products_id=product1_.id where products0_.shops_id=?
+18-10-2021 07:10:33.600 [task-6] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [2]
+18-10-2021 07:10:33.601 [task-6] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select products0_.shops_id as shops_id1_3_0_, products0_.products_id as products2_3_0_, product1_.id as id1_0_1_, product1_.name as name2_0_1_, product1_.price as price3_0_1_ from shop_products products0_ inner join product product1_ on products0_.products_id=product1_.id where products0_.shops_id=?
+18-10-2021 07:10:33.602 [task-6] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [3]
+18-10-2021 07:10:33.602 [task-6] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select products0_.shops_id as shops_id1_3_0_, products0_.products_id as products2_3_0_, product1_.id as id1_0_1_, product1_.name as name2_0_1_, product1_.price as price3_0_1_ from shop_products products0_ inner join product product1_ on products0_.products_id=product1_.id where products0_.shops_id=?
+18-10-2021 07:10:33.602 [task-6] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [4]
+18-10-2021 07:10:33.603 [task-6] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select queues0_.shop_id as shop_id3_1_0_, queues0_.id as id1_1_0_, queues0_.id as id1_1_1_, queues0_.max_number as max_numb2_1_1_, queues0_.shop_id as shop_id3_1_1_ from queue queues0_ where queues0_.shop_id=?
+18-10-2021 07:10:33.604 [task-6] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [1]
+18-10-2021 07:10:33.605 [task-6] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select queues0_.shop_id as shop_id3_1_0_, queues0_.id as id1_1_0_, queues0_.id as id1_1_1_, queues0_.max_number as max_numb2_1_1_, queues0_.shop_id as shop_id3_1_1_ from queue queues0_ where queues0_.shop_id=?
+18-10-2021 07:10:33.605 [task-6] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [4]
+18-10-2021 07:10:33.606 [task-6] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select queues0_.shop_id as shop_id3_1_0_, queues0_.id as id1_1_0_, queues0_.id as id1_1_1_, queues0_.max_number as max_numb2_1_1_, queues0_.shop_id as shop_id3_1_1_ from queue queues0_ where queues0_.shop_id=?
+18-10-2021 07:10:33.607 [task-6] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [3]
+18-10-2021 07:10:33.608 [task-6] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select queues0_.shop_id as shop_id3_1_0_, queues0_.id as id1_1_0_, queues0_.id as id1_1_1_, queues0_.max_number as max_numb2_1_1_, queues0_.shop_id as shop_id3_1_1_ from queue queues0_ where queues0_.shop_id=?
+18-10-2021 07:10:33.608 [task-6] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [2]
+18-10-2021 07:10:33.610 [task-6] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select shops0_.products_id as products2_3_0_, shops0_.shops_id as shops_id1_3_0_, shop1_.id as id1_2_1_, shop1_.contact as contact2_2_1_, shop1_.location as location3_2_1_, shop1_.max_queue_size as max_queu4_2_1_, shop1_.name as name5_2_1_, shop1_.queue_size as queue_si6_2_1_ from shop_products shops0_ inner join shop shop1_ on shops0_.shops_id=shop1_.id where shops0_.products_id=?
+18-10-2021 07:10:33.610 [task-6] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [1]
+18-10-2021 07:10:33.612 [task-6] [shop-service, ] DEBUG org.hibernate.SQL.logStatement - select shops0_.products_id as products2_3_0_, shops0_.shops_id as shops_id1_3_0_, shop1_.id as id1_2_1_, shop1_.contact as contact2_2_1_, shop1_.location as location3_2_1_, shop1_.max_queue_size as max_queu4_2_1_, shop1_.name as name5_2_1_, shop1_.queue_size as queue_si6_2_1_ from shop_products shops0_ inner join shop shop1_ on shops0_.shops_id=shop1_.id where shops0_.products_id=?
+18-10-2021 07:10:33.613 [task-6] [shop-service, ] TRACE o.h.type.descriptor.sql.BasicBinder.bind - binding parameter [1] as [BIGINT] - [2]
+18-10-2021 07:14:32.015 [AsyncResolver-bootstrap-executor-0] [shop-service, ] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+18-10-2021 08:23:30.933 [HikariPool-2 housekeeper] [shop-service, ] WARN  com.zaxxer.hikari.pool.HikariPool.run - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=1h6m38s543ms459µs500ns).
+18-10-2021 08:25:39.466 [AsyncResolver-bootstrap-executor-0] [shop-service, ] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+18-10-2021 08:30:39.468 [AsyncResolver-bootstrap-executor-0] [shop-service, ] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+18-10-2021 08:35:39.469 [AsyncResolver-bootstrap-executor-0] [shop-service, ] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+18-10-2021 08:40:39.471 [AsyncResolver-bootstrap-executor-0] [shop-service, ] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+18-10-2021 08:45:39.472 [AsyncResolver-bootstrap-executor-0] [shop-service, ] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+18-10-2021 08:50:39.473 [AsyncResolver-bootstrap-executor-0] [shop-service, ] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+18-10-2021 08:55:39.474 [AsyncResolver-bootstrap-executor-0] [shop-service, ] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+18-10-2021 09:00:39.477 [AsyncResolver-bootstrap-executor-0] [shop-service, ] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+18-10-2021 09:02:42.974 [SpringContextShutdownHook] [shop-service, ] INFO  o.s.c.n.e.s.EurekaServiceRegistry.deregister - Unregistering application SHOP-SERVICE with eureka with status DOWN
+18-10-2021 09:02:42.988 [SpringContextShutdownHook] [shop-service, ] INFO  c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1634522562988, current=DOWN, previous=UP]
+18-10-2021 09:02:42.991 [DiscoveryClient-InstanceInfoReplicator-0] [shop-service, ] INFO  c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_SHOP-SERVICE/DTRANW10.mshome.net:shop-service:8080: registering service...
+18-10-2021 09:02:43.041 [DiscoveryClient-InstanceInfoReplicator-0] [shop-service, ] INFO  c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_SHOP-SERVICE/DTRANW10.mshome.net:shop-service:8080 - registration status: 204
+18-10-2021 09:02:44.531 [SpringContextShutdownHook] [shop-service, ] INFO  o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+18-10-2021 09:02:44.534 [SpringContextShutdownHook] [shop-service, ] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+18-10-2021 09:02:44.572 [SpringContextShutdownHook] [shop-service, ] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-2 - Shutdown initiated...
+18-10-2021 09:02:44.586 [SpringContextShutdownHook] [shop-service, ] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-2 - Shutdown completed.
+18-10-2021 09:02:44.588 [SpringContextShutdownHook] [shop-service, ] INFO  c.netflix.discovery.DiscoveryClient.shutdown - Shutting down DiscoveryClient ...
+18-10-2021 09:02:47.593 [SpringContextShutdownHook] [shop-service, ] INFO  c.netflix.discovery.DiscoveryClient.unregister - Unregistering ...
+18-10-2021 09:02:51.624 [SpringContextShutdownHook] [shop-service, ] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient.execute - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/SHOP-SERVICE/DTRANW10.mshome.net:shop-service:8080": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/SHOP-SERVICE/DTRANW10.mshome.net:shop-service:8080": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:784)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:710)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:601)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:235)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:390)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:258)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1152)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1145)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1111)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1080)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:171)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:996)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:775)
+	... 35 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
+	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.base/java.net.Socket.connect(Socket.java:608)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 48 more
+
+18-10-2021 09:02:51.625 [SpringContextShutdownHook] [shop-service, ] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient.execute - Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/SHOP-SERVICE/DTRANW10.mshome.net:shop-service:8080": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+18-10-2021 09:02:55.637 [SpringContextShutdownHook] [shop-service, ] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient.execute - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/SHOP-SERVICE/DTRANW10.mshome.net:shop-service:8080": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/SHOP-SERVICE/DTRANW10.mshome.net:shop-service:8080": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:784)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:710)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:601)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:235)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:390)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:258)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1152)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1145)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1111)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1080)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:171)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:996)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:775)
+	... 36 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
+	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.base/java.net.Socket.connect(Socket.java:608)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 49 more
+
+18-10-2021 09:02:55.638 [SpringContextShutdownHook] [shop-service, ] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient.execute - Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/SHOP-SERVICE/DTRANW10.mshome.net:shop-service:8080": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+18-10-2021 09:02:55.639 [SpringContextShutdownHook] [shop-service, ] ERROR c.netflix.discovery.DiscoveryClient.unregister - DiscoveryClient_SHOP-SERVICE/DTRANW10.mshome.net:shop-service:8080 - de-registration failedCannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:235)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:390)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:258)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1152)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1145)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1111)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1080)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:171)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:996)
+18-10-2021 09:02:55.647 [SpringContextShutdownHook] [shop-service, ] INFO  c.netflix.discovery.DiscoveryClient.shutdown - Completed shut down of DiscoveryClient
