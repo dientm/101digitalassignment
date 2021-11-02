@@ -10,6 +10,8 @@ spring:
     url: jdbc:postgresql://dbhost:5432/order
     username: postgres
     password: postgres
+  activemq:
+    broker-url: tcp://centos:61616
 
 server:
   port: 8082

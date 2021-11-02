@@ -3,6 +3,7 @@ package dto.user;
 public class UserDto {
     private long id;
     private String username;
+    private String password;
     private String role;
 
     public long getId() {
@@ -29,6 +30,15 @@ public class UserDto {
 
     public UserDto setRole(String role) {
         this.role = role;
+        return this;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public UserDto setPassword(String password) {
+        this.password = password;
         return this;
     }
 }

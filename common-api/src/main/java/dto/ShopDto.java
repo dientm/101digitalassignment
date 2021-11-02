@@ -12,7 +12,7 @@ public class ShopDto {
 
     private String location;
 
-    private List<Long> products;
+    private List<ProductDto> products;
 
     private int queueSize;
 
@@ -60,11 +60,11 @@ public class ShopDto {
         return this;
     }
 
-    public List<Long> getProducts() {
+    public List<ProductDto> getProducts() {
         return products;
     }
 
-    public ShopDto setProducts(List<Long> products) {
+    public ShopDto setProducts(List<ProductDto> products) {
         this.products = products;
         return this;
     }

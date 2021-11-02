@@ -2,6 +2,7 @@ package com.digital.assignment.coreservice.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,6 +14,7 @@ import com.digital.assignment.coreservice.exception.ShopNotFoundException;
 import com.digital.assignment.coreservice.repository.QueueRepository;
 import com.digital.assignment.coreservice.repository.ShopRepository;
 
+import dto.ProductDto;
 import dto.ShopDto;
 
 @Service
@@ -28,13 +30,17 @@ public class ShopService {
     private ProductService productService;
 
 
-    public Shop save(ShopDto shopDto) {
+    public List<Shop> list() {
+        return shopRepository.findAll();
+    }
+
+    public void save(ShopDto shopDto) throws Exception {
         Shop shop = new Shop();
         shop.setName(shopDto.getName());
         shop.setContact(shopDto.getContact());
         shop.setLocation(shopDto.getLocation());
 
-        final List<Long> productIds = shopDto.getProducts();
+        final List<Long> productIds = shopDto.getProducts().stream().map(ProductDto::getId).collect(Collectors.toList());
         final List<Product> products = productService.getByIds(productIds);
 
         shop.setProducts(products);
@@ -48,9 +54,8 @@ public class ShopService {
             queues.add(queue);
         }
         shop.setQueues(queues);
-        Shop entity = shopRepository.saveAndFlush(shop);
+        shopRepository.saveAndFlush(shop);
 
-        return shopRepository.findById(entity.getId()).orElse(null);
     }
     
     public Shop getById(long shopId) throws ShopNotFoundException {

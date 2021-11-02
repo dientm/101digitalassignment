@@ -2,6 +2,7 @@ package com.digital.assignment.coreservice.service;
 
 import java.util.Comparator;
 
+import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -15,8 +16,11 @@ public class CoreService {
 
     private final RestTemplate restTemplate;
 
-    public CoreService(RestTemplate restTemplate) {
+    private final JmsTemplate jmsTemplate;
+
+    public CoreService(RestTemplate restTemplate, JmsTemplate jmsTemplate) {
         this.restTemplate = restTemplate;
+        this.jmsTemplate = jmsTemplate;
     }
 
     // TODO: need to synchronize this logic
@@ -49,6 +53,7 @@ public class CoreService {
 
         // update order status to QUEUED
         restTemplate.postForObject("http://order-service/orders/" + orderId + "/status", "QUEUED", String.class);
+
 
 
     }

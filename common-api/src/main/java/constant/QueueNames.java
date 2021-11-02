@@ -1,9 +1,5 @@
-package constant;/**
- *
- * @author dtran@fortna.com
- *
- */public class QueueNames {
+package constant;
 
-private static final Logger LOGGER = LoggerFactory.getLogger(QueueNames.class);
-
+public class QueueNames {
+    public static String QUEUE_NEW_ORDER = "ORDER.NEW_ORDER";
 }

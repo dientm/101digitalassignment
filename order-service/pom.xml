@@ -40,6 +40,11 @@
 			<scope>test</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-activemq</artifactId>
+		</dependency>
+
 		<!-- Request/Response logging -->
 		<dependency>
 			<groupId>net.rakugakibox.spring.boot</groupId>

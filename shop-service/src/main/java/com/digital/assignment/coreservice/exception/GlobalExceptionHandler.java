@@ -1,9 +1,12 @@
 package com.digital.assignment.coreservice.exception;
 
+import com.digital.assignment.coreservice.configuration.ResourceBundler;
+import com.digital.assignment.coreservice.constant.MessageCode;
 import com.fasterxml.jackson.core.JsonParseException;
 
 import org.apache.commons.lang.StringUtils;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -18,8 +21,14 @@ import java.util.List;
 import constant.ErrorCode;
 import msg.BaseResponse;
 
-//@ControllerAdvice
+@ControllerAdvice
 public class GlobalExceptionHandler {
+
+    private final ResourceBundler message;
+
+    public GlobalExceptionHandler(ResourceBundler message) {
+        this.message = message;
+    }
 
     @ExceptionHandler(value = {BadRequestException.class})
     @ResponseBody
@@ -93,5 +102,12 @@ public class GlobalExceptionHandler {
         baseResponse.setMessage(e.getMessage());
 
         return baseResponse;
+    }
+
+    @ExceptionHandler(value = ShopNotFoundException.class)
+    @ResponseBody
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ResponseEntity<Object> shopNotFoundException(ShopNotFoundException exception) {
+        return new ResponseEntity<>(message.toLocale(MessageCode.SHOP_NOT_FOUND), HttpStatus.NOT_FOUND);
     }
 }
